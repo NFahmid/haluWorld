@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1700818639 source:e:\code\github\haluworld\220042121_task2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

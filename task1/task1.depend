@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1700817993 source:e:\code\github\haluworld\task1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
