@@ -20,11 +20,10 @@ int main(){
 
         if (letters[x] == false && s[i] >= 'a' && s[i] <= 'z'){
             count++;
-        }
-
-        if (s[i] >= 'a' && s[i] <= 'z'){
             letters[s[i] - 'a'] = true;
         }
     }
+
+    printf("%d", count);
     return 0;
 }
