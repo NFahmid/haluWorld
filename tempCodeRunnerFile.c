@@ -1,30 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
 
-int main(){
-    int n;
-    scanf("%d\n", &n);
-
-    char s[1001];
-    fgets(s, 1001, stdin);
-
-    int length = strlen(s);
-
-    bool letters[26] = {false};
-    int count = 0;
-
-    for (int i=0; i<length; i++){
-        int x = s[i] - 'a';
-
-        if (letters[x] == false && s[i] >= 'a' && s[i] <= 'z'){
-            count++;
-        }
-
-        if (s[i] >= 'a' && s[i] <= 'z'){
-            letters[s[i] - 'a'] = true;
-        }
-    }
-    return 0;
+int main() {
+    FILE *fp = fopen("rough1.txt", "a+");
+    fseek (fp, -2L, SEEK_END);
+    fprintf(fp, "Hello ld\n");
+    fclose(fp);
 }
