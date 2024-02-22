@@ -1,37 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int compareIntegers(const void *a, const void *b) {
-    return (*(int *)a - *(int *)b);
-}
-
 int main() {
     int n;
 
     scanf("%d", &n);
 
-    int a[n];
     for (int i = 0; i < n; i++) {
-        scanf("%d", &a[i]);
-    }
+        int a;
+        scanf("%d", &a);
+        int count1 = 0;
+        int count2 = 0;
 
-    qsort(a, n, sizeof(int), compareIntegers);
-
-    long long x = 0;
-    long long y = 0;
-
-    for (int i = 0; i < n; i++) {
-        if (i <= (n / 2) - 1){
-            x += a[i];
+        char s[a];
+        for (int j = 0; j < a; j++) {
+            scanf(" %c", &s[j]); 
         }
-        else{
-            y += a[i];
+
+        for (int j = 0; j < a; j++) {
+            if (s[j] == 'B') {
+                count1 = j;
+                break;
+            }
         }
+
+        for (int j = 0; j < a; j++) {
+            if (s[j] == 'B') {
+                count2 = j;
+            }
+        }
+
+        printf("%d\n", count2 - count1 + 1);
+        
     }
-
-    long long ans = x * x + y * y;
-
-    printf("%lld", ans);
 
     return 0;
 }

@@ -1,27 +1,40 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main() {
-    int n;
-    scanf("%d", &n);
+#define MAX_SIZE 1000
 
-    int temp = n;
-    int length = 0;
+int main(){
+    char a[MAX_SIZE];
+    fgets(a, MAX_SIZE, stdin);
 
-    while (temp != 0){
-        temp/=10;
-        length++;
+    int len = strlen(a);
+    if (a[len - 1] == '\n') {
+        a[--len] = '\0'; // remove newline character
     }
 
-    for (int i=0; i<length; i++){
-        int a = n%10;
-        n/=10;
-        if (a!=7  &&  a!=4){
+    int i;
+    for (i = 0; i < len;){
+        if (a[i] == '1' && a[i+1] == '4' && a[i+2] == '4'){
+            i += 3;
+        }
+        else if (a[i] == '1' && a[i+1] == '4'){
+            i += 2;
+        }
+        else if (a[i] == '1'){
+            i += 1;
+        }
+        else {
             printf("NO\n");
             return 0;
         }
     }
 
-    printf("YES\n");
+    if (i == len) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
 
     return 0;
 }
