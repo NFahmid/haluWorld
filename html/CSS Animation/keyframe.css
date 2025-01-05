@@ -1,0 +1,59 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.grass .sky .road{
+    position: relative;
+}
+.sky{
+    height: 40%;
+    background-color: skyblue;
+}
+.grass{
+    height: 30%;
+    background-color: green;
+}
+.road{
+    height: 30%;
+    background-color: grey;
+}
+.lines{
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 85%;
+}
+.mario{
+    position: absolute;
+    top: 65%;
+    left: 0;
+    animation-name: drive;
+    animation-duration: 3s; /* Adjust duration as needed */
+    animation-iteration-count: infinite; /* Loop indefinitely */
+    animation-timing-function: linear; /* Constant speed */
+}
+.luigi{
+    position: absolute;
+    top: 85%;
+    left: 0;
+    animation-name: drive;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.cloud{
+    position: absolute;
+}
+.cloud:nth-child(1){
+    width: 200px;
+    top: 120px;
+}
+
+@keyframes drive{
+    from{ transform: translateX(-100px)}
+    to{ transform: translateX(1500px) } /* Move Mario across the entire screen */
+}

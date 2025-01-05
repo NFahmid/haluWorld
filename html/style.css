@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: blue;
+    font: 100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+h2{
+    color: bisque;
+    text-align: center;
+    background-color: black;
+    font: initial;
+}
+/* p{
+    /* border: 2px solid red;
+    margin: auto; */
+    /* color: rgb(0, 20, 75); */
+/* } */ */
+label{
+    color: red;
+}
+
+.f{
+    color: blue;
+}
+
+.s{
+    color: green;
+}
+.t{
+    color: rgb(45, 38, 135);
+}
+
+div.f{
+    color: rgb(32, 66, 152);
+}    /* if we want to target a specific one with the same class name as other
+
+/* accessing via id
+ we can modify using id for this type #id{} */
+
+ #hh{
+    color: magenta;
+ }
+
+ div.f{
+    color: lightcoral;
+    border: 1px solid black;
+    margin: 40px;
+ }
+
+ p{
+    border: inherit;
+    color: inherit;
+    margin: inherit;
+    color: red;
+ }

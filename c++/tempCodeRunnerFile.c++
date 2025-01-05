@@ -14,4 +14,6 @@ int main()
 
     cout<<"The value of the sum of a and b is "<<a+b;
 
+    int ab;
+    cout<<"Enter ab " >> ab << ab;
 }

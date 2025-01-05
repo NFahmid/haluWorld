@@ -1,0 +1,92 @@
+header{
+    background-color: red;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;     /* brings things forwae */
+    top: 0;
+    left: 0;
+}
+header h1{
+    color: white;
+    border: 8px solid white;
+    padding: 6px 12px;
+    display: inline-block ;
+    border-radius: 30px;
+}
+.banner{
+    position: relative;
+}
+.banner img{
+    max-width: 100%;
+}
+.banner .welcome{
+    background-color: #feb614;
+    color: white;
+    padding: 30px;
+    position: absolute;
+    left: 0px;
+    top: 30%;
+}
+.banner h2{
+    font-size: 74px;;
+}
+.banner h2 span{
+    font-size: 1.3em;
+}
+nav{
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: sticky;
+    top: 148px;
+}
+nav ul{
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav li{
+    width: 25%;
+    display: inline-block;
+    font-size: 24px;
+    
+}
+nav li a{
+    text-decoration: none;
+    color: #4b4b4b;
+}
+nav ul li a.join{
+    color: red;
+}
+.join{
+    background-color: lightgray;
+    text-align: center;
+    padding: 40px;
+}
+.images{
+    max-width: 100%;
+}
+.join h2{
+    text-align: center;
+    color: red;
+    margin: 2px;
+    border: 4px solid black;
+    padding: 6px 12px;
+    width: 100%;
+    display: inline-block;
+}
+.form input{
+    text-align: center;
+    margin: 20px 0px;
+    padding: 10px 20px;
+    font-size: large;
+    border-radius: 28px;
+    border: 4px solid white;
+}
+footer{
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-size: large;
+}

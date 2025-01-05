@@ -1,0 +1,24 @@
+.titles{
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+.titles ul{
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.titles li{
+    width: 12.5%;
+    display: inline-block;
+    font-size: 16px;
+}
+.images{
+    text-align: center;
+}
+.main{
+    /* text-align: center; */
+}
+.googlen{
+    color: blue;
+}
