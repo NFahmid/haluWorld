@@ -1,0 +1,22 @@
+1. npm init -y
+2. npm i -D tailwindcss
+3. npx tailwindcss init
+4. create src and output folder
+	create tailwind.css in src
+5. in tailwind.css
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+6.create .vscode file and settings.json inside that
+7.in settings.json
+	{
+    "css.validate": false,
+    "tailwindCSS.emmetCompletions": true,
+}
+8.in package.json inside scripts
+    "build": "tailwindcss -i ./src/tailwind.css -o ./output/tailwind.css -w"
+9.in html file
+	    <link rel="stylesheet" href="./output/tailwind.css">
+10.inside tailwind.config.js
+  content: ['./*.html'],
+11.npm run build

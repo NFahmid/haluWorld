@@ -1,48 +1,100 @@
-console.log("Hello, World!");
+// // Function that returns a function
+// function greet(greeting){
+//     return function(name){
+//         console.log(greeting + " " + name);
+//     }
+// }
 
-// variables
+// let greetMorning = greet("Good Morning");
+// let greetEvening = greet("Good Evening");
 
-var x = 10;
-var name = "John";
-var isTrue = true;
+// greetMorning("John");
+// greetEvening("John");
 
-const PI = 3.14;
-// PI = 3.14159; // Error
+// // Function that accepts a function as an argument
+// function greet2(greeting, name){
+//     console.log(greeting + " " + name);
+// }
 
-console.log(x);
-console.log(name);
-console.log(isTrue);
-console.log(PI);
+// function greetMorning2(name){
+//     greet2("Good Morning", name);
+// }
 
+// function greetEvening2(name){
+//     greet2("Good Evening", name);
+// }
 
-// functions
+// greetMorning2("John");
+// greetEvening2("John");
 
-function sayHello() {
-    console.log("Hello, World!");
+// // Function that returns a function that accepts a function as an argument
+// function greet3(greeting){
+//     return function(name){
+//         console.log(greeting + " " + name);
+//     }
+// }
+
+// function greetMorning3(name){
+//     greet3("Good Morning")(name);
+// }
+
+// function greetEvening3(name){
+//     greet3("Good Evening")(name);
+// }
+
+// greetMorning3("John");
+// greetEvening3("John");
+
+// // Function that returns a function that accepts a function as an argument
+// function greet4(greeting){
+//     return function(name){
+//         console.log(greeting + " " + name);
+//     }
+// }
+
+// function greetMorning4(name){
+//     greet4("Good Morning")(name);
+// }
+
+// function greetEvening4(name){
+//     greet4("Good Evening")(name);
+// }
+
+// greetMorning4("John");
+// greetEvening4("John");
+
+// set timeout
+
+// function greet5(greeting){
+//     return function(name){
+//         console.log(greeting + " " + name);
+//     }
+// }
+
+// let greetMorning5 = greet5("Good Morning");
+// let greetEvening5 = greet5("Good Evening");
+
+// setTimeout(function(){
+//     greetMorning5("John");
+// }, 2000);
+
+// setTimeout(function(){
+//     greetEvening5("John");
+// }, 4000);
+
+// asynchoronous function
+
+function greetMorning(){
+    console.log("Good Morning");
 }
 
-sayHello();
+function greetEvening(){
+    console.log("Good Evening");
+}
 
-console.log("Hello, my name is " + name + ".");
-// or
-console.log(`Hello, my name is ${name}.`);
+setTimeout(greetMorning, 2000);
 
-console.log(this);
+setTimeout(greetEvening, 4000);
 
-const user = {
-    name: "John",
-    age: 30,
-    married: false,
-    purchases: ["phone", "laptop", "book"],
+console.log("End of script");
 
-    sayHello: function() {
-        console.log("Hello, World!");
-    },
-
-    getName: function() {
-        console.log(this.name);
-    }
-};
-
-user.sayHello();
-user.getName();

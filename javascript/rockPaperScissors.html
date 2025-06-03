@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Pick an option</h1>
+    <button onclick="
+        const randomNumber = Math.floor(Math.random() * 3);
+
+        var computerMove = '';
+
+        if (randomNumber === 0) {
+            computerMove = 'Rock';
+        } else if (randomNumber === 1) {
+            computerMove = 'Paper';
+        } else {
+            computerMove = 'Scissors';
+        }
+
+        console.log(`Computer picked: ${computerMove}`);
+
+        console.log('Player picked: Rock');
+
+        if (computerMove === 'Rock') {
+            console.log('It\'s a tie!');
+        } else if (computerMove === 'Paper') {
+            console.log('Computer wins!');
+        } else {
+            console.log('Player wins!');
+        }
+    ">Rock</button>
+    <button onclick="
+        const randomNumber2 = Math.floor(Math.random() * 3);
+
+        var computerMove2 = '';
+
+        if (randomNumber2 === 0) {
+            computerMove2 = 'Rock';
+        } else if (randomNumber2 === 1) {
+            computerMove2 = 'Paper';
+        } else {
+            computerMove2 = 'Scissors';
+        }
+
+        console.log(`Computer picked: ${computerMove2}`);
+
+        console.log('Player picked: Paper');
+
+        if (computerMove2 === 'Rock') {
+            console.log('Player wins!');
+            alert('Player wins!');
+        } else if (computerMove2 === 'Paper') {
+            console.log('It\'s a tie!');
+            alert('It\'s a tie!');
+        } else {
+            console.log('Computer wins!');
+            alert('Computer wins!');
+        }
+    ">Paper</button>
+    <button onclick="
+        const randomNumber3 = Math.floor(Math.random() * 3);
+
+        var computerMove3 = '';
+
+        if (randomNumber3 === 0) {
+            computerMove3 = 'Rock';
+        } else if (randomNumber3 === 1) {
+            computerMove3 = 'Paper';
+        } else {
+            computerMove3 = 'Scissors';
+        }
+
+        console.log(`Computer picked: ${computerMove3}`);
+
+        console.log('Player picked: Scissors');
+
+        if (computerMove3 === 'Rock') {
+            console.log('Computer wins!');
+        } else if (computerMove3 === 'Paper') {
+            console.log('Player wins!');
+        } else {
+            console.log('It\'s a tie!');
+        }
+    ">Scissors</button>
+
+    <script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p>Subscribe Button`</p>
+    <button onclick="
+        const buttonElement = document.querySelector('.subscribeButton');
+
+        if (buttonElement.innerHTML === 'Subscribe') {
+            buttonElement.innerHTML = 'Subscribed';
+        } else {
+            buttonElement.innerHTML = 'Subscribe';
+        }
+    " class="subscribeButton">Subscribe</button>
+
+    <br><br>
+
+    <p>Shipping Calculator</p>
+    <input type="text" id="shippingInput" placeholder="Enter your price">
+    <button onclick="
+        const shippingInput = document.querySelector('#shippingInput');
+        const shippingPrice = Number(shippingInput.value);
+
+        const shippingCost = document.querySelector('.shippingCost');
+
+        if (shippingPrice < 50) {
+            shippingPrice = shippingPrice + 5;
+            shippingCost.innerHTML = 'Shipping Cost: $' + shippingPrice;
+        } else {
+            shippingPrice = shippingPrice + 10;
+            shippingCost.innerHTML = 'Shipping Cost: $' + shippingPrice;
+        }
+    ">Calculate Shipping</button>
+
+    <p class="shippingCost"></p>
+    <script>
+    </script>
+</body>
+</html>

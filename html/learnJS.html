@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        document.body.style.backgroundColor = "lightblue";  // changes the background color of the body to lightblue
+
+        setTimeout(() => {
+            document.body.style.backgroundColor = "lightgreen";  // changes the background color of the body to lightgreen after 2 seconds
+        }, 2000);
+
+        alert(location.href); // shows current URL
+        if (confirm("Go to Wikipedia?")) {
+            location.href = "https://wikipedia.org"; // redirect the browser to another URL
+        }
+    </script>
+</body>
+</html>

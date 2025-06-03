@@ -1,48 +1,57 @@
-console.log("Hello, World!");
+// console.log("Hello, World!");
 
-// variables
+// // variables
 
-var x = 10;
-var name = "John";
-var isTrue = true;
+// var x = 10;
+// var name = "John";
+// var isTrue = true;
 
-const PI = 3.14;
-// PI = 3.14159; // Error
+// const PI = 3.14;
+// // PI = 3.14159; // Error
 
-console.log(x);
-console.log(name);
-console.log(isTrue);
-console.log(PI);
+// console.log(x);
+// console.log(name);
+// console.log(isTrue);
+// console.log(PI);
 
 
-// functions
+// // functions
 
-function sayHello() {
-    console.log("Hello, World!");
-}
+// function sayHello() {
+//     console.log("Hello, World!");
+// }
 
-sayHello();
+// sayHello();
 
-console.log("Hello, my name is " + name + ".");
-// or
-console.log(`Hello, my name is ${name}.`);
+// console.log("Hello, my name is " + name + ".");
+// // or
+// console.log(`Hello, my name is ${name}.`);
 
-console.log(this);
+// console.log(this);
 
-const user = {
-    name: "John",
-    age: 30,
-    married: false,
-    purchases: ["phone", "laptop", "book"],
+// const user = {
+//     name: "John",
+//     age: 30,
+//     married: false,
+//     purchases: ["phone", "laptop", "book"],
 
-    sayHello: function() {
-        console.log("Hello, World!");
-    },
+//     sayHello: function() {
+//         console.log("Hello, World!");
+//     },
 
-    getName: function() {
-        console.log(this.name);
-    }
-};
+//     getName: function() {
+//         console.log(this.name);
+//     }
+// };
 
-user.sayHello();
-user.getName();
+// user.sayHello();
+// user.getName();
+
+let variable = 10;
+console.log(variable);
+
+variable = "Hello, World!";
+console.log(variable);
+
+let randomChoice = Math.floor(Math.random() * 3);
+console.log(randomChoice);

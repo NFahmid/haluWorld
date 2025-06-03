@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <style>
+        .heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .toDoContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin: 1rem;
+            background: lightblue;
+        }
+        input{
+            display: inline-block;
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 1rem;
+        }
+        button{
+            display: inline-block;
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 1rem;
+            background: lightblue;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-decoration: none;
+        }
+    </style>
+
+    <div class="heading">
+        <p>To Do List</p>
+    </div>
+    <div class="toDoContainer">
+        <input type="text" id="toDoInput" placeholder="Enter your task" class="toDoInput">
+        <input type="date" id="toDoDate" class="toDoDate">
+        <button onclick="
+            addToDo();
+        ">Add Task</button>
+
+    </div>
+
+    <ul class="toDoList">
+    
+
+    <script>
+        const toDoList = [];
+
+        function addToDo() {
+            const toDoInput = document.querySelector('.toDoInput');
+            const toDoDate = document.querySelector('.toDoDate');
+            const toDoListElement = document.querySelector('.toDoList');
+
+            const toDo = {
+                task: toDoInput.value,
+                date: toDoDate.value
+            };
+
+            toDoList.push(toDo);
+
+            toDoListElement.innerHTML = '';
+
+            toDoList.forEach(function(item) {
+                const li = document.createElement('li');
+                li.innerHTML = item.task + '             ' + item.date;
+                toDoListElement.appendChild(li);
+
+                // Create a delete button
+
+                const deleteButton = document.createElement('button');
+                deleteButton.innerHTML = 'Delete';
+                li.appendChild(deleteButton);
+
+                deleteButton.onclick = function() {
+                    const index = toDoList.indexOf(item);
+                    toDoList.splice(index, 1);
+                    toDoListElement.removeChild(li);
+                }
+
+            });
+
+            toDoInput.value = '';
+            toDoDate.value = '';
+            
+        }
+
+
+
+    </script>
+</body>
+</html>
